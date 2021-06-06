@@ -28,36 +28,43 @@ namespace Flight_Reservation_system
 
         private void button1_Click(object sender, EventArgs e)
         {
-            con = new OracleConnection(conStr);
-            con.Open();
-            OracleCommand cmd = new OracleCommand();
-            cmd.Connection = con;
-
-            cmd.CommandText = "SELECT EMAIL from PRO_CUSTOMER WHERE EMAIL= :email and PASSWORD= :password";
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add("email", textBox1.Text);
-            cmd.Parameters.Add("password", textBox2.Text);
-            OracleDataReader dr = cmd.ExecuteReader();
-            string x="";
-            while (dr.Read())
+            if (textBox1.Text.Equals("E-Mail") || textBox2.Text.Equals("PASSWORD") || textBox1.Text.Equals("") || textBox2.Text.Equals(""))
             {
-                x = dr[0].ToString();
-            }
-
-            if (x.Equals(""))
-            {
-                MessageBox.Show("Invalid Email or password");
+                MessageBox.Show("Empty Cell");
             }
             else
             {
-                Program.UserName = gat_userName();
-                Program.UserEmail = textBox1.Text;
-                Program.UserPassword = textBox2.Text;
-                MessageBox.Show("login successfully");
+                con = new OracleConnection(conStr);
+                con.Open();
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = con;
 
-                Home.UserNameLabel.Text = Program.UserName;
-                Home.UserNameLabel.Visible = true;
-                this.Close();
+                cmd.CommandText = "SELECT EMAIL from PRO_CUSTOMER WHERE EMAIL= :email and PASSWORD= :password";
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add("email", textBox1.Text);
+                cmd.Parameters.Add("password", textBox2.Text);
+                OracleDataReader dr = cmd.ExecuteReader();
+                string x = "";
+                while (dr.Read())
+                {
+                    x = dr[0].ToString();
+                }
+
+                if (x.Equals(""))
+                {
+                    MessageBox.Show("Invalid Email or password");
+                }
+                else
+                {
+                    Program.UserName = gat_userName();
+                    Program.UserEmail = textBox1.Text;
+                    Program.UserPassword = textBox2.Text;
+                    MessageBox.Show("login successfully");
+
+                    Home.UserNameLabel.Text = Program.UserName;
+                    Home.UserNameLabel.Visible = true;
+                    this.Close();
+                }
             }
         }
 
@@ -87,6 +94,11 @@ namespace Flight_Reservation_system
             }
 
             return name;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

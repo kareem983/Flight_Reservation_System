@@ -39,12 +39,14 @@ namespace Flight_Reservation_system
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox3.Text.Equals("") || textBox4.Text.Equals("") || textBox1.Text.Equals("") || textBox2.Text.Equals("") || textBox5.Text.Equals(""))
+            if (textBox3.Text.Equals("First Name") || textBox4.Text.Equals("Second Name") ||
+                textBox1.Text.Equals("E-Mail") || textBox2.Text.Equals("PASSWORD") || textBox5.Text.Equals("Phone Number1")
+                ||textBox3.Text.Equals("") || textBox4.Text.Equals("") ||textBox1.Text.Equals("") || textBox2.Text.Equals("") || textBox5.Text.Equals(""))
             {
                 MessageBox.Show("Empty Cell");
             }
             else
-            {//karimsaid026@gmail.com
+            {
                 con = new OracleConnection(conStr);
                 con.Open();
                 OracleCommand cmd = new OracleCommand();
