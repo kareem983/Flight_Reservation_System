@@ -127,5 +127,30 @@ namespace Flight_Reservation_system
         {
             this.Close();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            new FlightsReport().Show();
+            
+            /* if (!Program.UserEmail.Equals(""))
+             {
+                // go to Flights Crystal Report 1
+                new FlightsReport().Show();
+             }
+             else
+             {
+                 MessageBox.Show("Login first!!!");
+             }*/
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

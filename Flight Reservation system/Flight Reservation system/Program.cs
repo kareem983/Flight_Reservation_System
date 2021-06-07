@@ -22,6 +22,7 @@ namespace Flight_Reservation_system
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Home());
+            
         }
     }
 }
