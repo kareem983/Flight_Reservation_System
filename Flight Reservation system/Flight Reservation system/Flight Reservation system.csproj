@@ -113,6 +113,18 @@
     <Compile Include="Forms\Search For Flight.Designer.cs">
       <DependentUpon>Search For Flight.cs</DependentUpon>
     </Compile>
+    <Compile Include="TownsCrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TownsCrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Crystal Reports Forms\TownsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Crystal Reports Forms\TownsReport.Designer.cs">
+      <DependentUpon>TownsReport.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FlightsCrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>FlightsCrystalReport1.cs</LastGenOutput>
@@ -122,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Crystal Reports Forms\FlightsReport.resx">
       <DependentUpon>FlightsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Crystal Reports Forms\TownsReport.resx">
+      <DependentUpon>TownsReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -150,6 +165,10 @@
     </Compile>
     <EmbeddedResource Include="Forms\Search For Flight.resx">
       <DependentUpon>Search For Flight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TownsCrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TownsCrystalReport2.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

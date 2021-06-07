@@ -150,7 +150,17 @@ namespace Flight_Reservation_system
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
+            new TownsReport().Show();
 
+            /* if (!Program.UserEmail.Equals(""))
+             {
+                // go to Towns Crystal Report 1
+                new TownsReport().Show();
+             }
+             else
+             {
+                 MessageBox.Show("Login first!!!");
+             }*/
         }
     }
 }
