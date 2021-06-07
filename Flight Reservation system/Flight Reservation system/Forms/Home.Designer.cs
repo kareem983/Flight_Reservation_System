@@ -147,7 +147,7 @@
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.Location = new System.Drawing.Point(4, 323);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(192, 56);
+            this.button6.Size = new System.Drawing.Size(193, 56);
             this.button6.TabIndex = 8;
             this.button6.Text = "Search For Flight";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -168,7 +168,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(195, 56);
             this.button4.TabIndex = 7;
-            this.button4.Text = "Manage Booking";
+            this.button4.Text = " Manage Booking";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
