@@ -43,7 +43,7 @@ namespace Flight_Reservation_system
                 textBox1.Text.Equals("E-Mail") || textBox2.Text.Equals("PASSWORD") || textBox5.Text.Equals("Phone Number1")
                 ||textBox3.Text.Equals("") || textBox4.Text.Equals("") ||textBox1.Text.Equals("") || textBox2.Text.Equals("") || textBox5.Text.Equals(""))
             {
-                MessageBox.Show("Empty Cell");
+                MessageBox.Show(Program.MessageAlert);
             }
             else
             {
@@ -87,7 +87,7 @@ namespace Flight_Reservation_system
                     Program.UserEmail = textBox1.Text;
                     Program.UserPassword = textBox2.Text;
 
-                    MessageBox.Show("successfully");
+                    MessageBox.Show("Welcome\nSign Up Process Done Successfully");
 
                     Home.UserNameLabel.Text = Program.UserName;
                     Home.UserNameLabel.Visible = true;

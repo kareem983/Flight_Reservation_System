@@ -24,6 +24,7 @@ namespace Flight_Reservation_system
         public Search_For_Flight()
         {
             InitializeComponent();
+            dataGridView1.Visible = false;
         }
 
         private void Search_For_Flight_Load(object sender, EventArgs e)
@@ -55,10 +56,11 @@ namespace Flight_Reservation_system
         {
             if (cmb_1.Text.Equals("") || cmb_2.Text.Equals(""))
             {
-                MessageBox.Show("Empty Cell!!!");
+                MessageBox.Show(Program.MessageAlert);
             }
             else
             {
+                dataGridView1.Visible = true;
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = conn;
                 cmd.CommandText = "PRO_SEARCH_FOR_Flight";
@@ -77,7 +79,13 @@ namespace Flight_Reservation_system
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Close();
+             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Columns.Clear();
+            dataGridView1.Visible = false;
         }
     }
 }

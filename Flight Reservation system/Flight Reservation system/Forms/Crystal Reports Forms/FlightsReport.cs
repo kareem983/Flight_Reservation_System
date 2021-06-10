@@ -27,7 +27,7 @@ namespace Flight_Reservation_system
             }
             catch
             {
-                MessageBox.Show("Wrong Data!!!");
+                MessageBox.Show(Program.ReportMessageAlert);
             }
         }
 

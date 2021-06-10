@@ -30,7 +30,7 @@ namespace Flight_Reservation_system
         {
             if (textBox1.Text.Equals("E-Mail") || textBox2.Text.Equals("PASSWORD") || textBox1.Text.Equals("") || textBox2.Text.Equals(""))
             {
-                MessageBox.Show("Empty Cell");
+                MessageBox.Show(Program.MessageAlert);
             }
             else
             {
@@ -59,7 +59,7 @@ namespace Flight_Reservation_system
                     Program.UserName = gat_userName();
                     Program.UserEmail = textBox1.Text;
                     Program.UserPassword = textBox2.Text;
-                    MessageBox.Show("login successfully");
+                    MessageBox.Show("Welcome Back\nLogin Successfully");
 
                     Home.UserNameLabel.Text = Program.UserName;
                     Home.UserNameLabel.Visible = true;

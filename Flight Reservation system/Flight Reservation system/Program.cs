@@ -12,7 +12,9 @@ namespace Flight_Reservation_system
         public static string UserName="";
         public static string UserEmail="";
         public static string UserPassword="";
-
+        public static string MessageAlert = "please fill all required data to complete process";
+        public static string ReportMessageAlert = "There is Wrong Data Display";
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

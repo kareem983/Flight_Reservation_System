@@ -199,6 +199,8 @@
     <Content Include="Assets\Home\tik.png" />
     <Content Include="Assets\Login\4051919-middle.png" />
     <Content Include="Assets\Login\login_icon.png" />
+    <Content Include="Assets\Search\back2.jpg" />
+    <Content Include="Assets\Search\background.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

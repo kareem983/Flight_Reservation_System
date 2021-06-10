@@ -26,24 +26,29 @@ namespace Flight_Reservation_system
 
         private void TownsReport_Load(object sender, EventArgs e)
         {
-            cr = new TownsCrystalReport2();
-
-            foreach(ParameterDiscreteValue v in cr.ParameterFields[0].DefaultValues)
+            try
             {
-                comboBox1.Items.Add(v.Value.ToString());
+                cr = new TownsCrystalReport2();
+                foreach (ParameterDiscreteValue v in cr.ParameterFields[0].DefaultValues)
+                {
+                    comboBox1.Items.Add(v.Value.ToString());
+                }
+                foreach (ParameterDiscreteValue v in cr.ParameterFields[1].DefaultValues)
+                {
+                    comboBox2.Items.Add(v.Value.ToString());
+                }
             }
-            foreach (ParameterDiscreteValue v in cr.ParameterFields[1].DefaultValues)
+            catch
             {
-                comboBox2.Items.Add(v.Value.ToString());
+                MessageBox.Show(Program.ReportMessageAlert);
             }
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (comboBox1.Text.ToString().Equals("") || comboBox2.Text.ToString().Equals(""))
             {
-                MessageBox.Show("Empty Cell!!!");
+                MessageBox.Show(Program.MessageAlert);
             }
             else
             {
