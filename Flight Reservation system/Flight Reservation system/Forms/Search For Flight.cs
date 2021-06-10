@@ -19,7 +19,7 @@ namespace Flight_Reservation_system
         OracleCommandBuilder cb;
         DataSet ds;
 
-        string ordb = "Data source=orcl;User Id=scott; Password=tiger;";
+        string ordb = Program.ConnStr;
 
         public Search_For_Flight()
         {

@@ -14,7 +14,7 @@ namespace Flight_Reservation_system
 {
     public partial class Booking : Form
     {
-        string conStr = "data source = orcl; user id = scott; password = tiger;";
+        string conStr = Program.ConnStr;
         OracleConnection con;
         public Booking()
         {

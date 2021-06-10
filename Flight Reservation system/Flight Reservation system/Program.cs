@@ -14,7 +14,8 @@ namespace Flight_Reservation_system
         public static string UserPassword="";
         public static string MessageAlert = "please fill all required data to complete process";
         public static string ReportMessageAlert = "There is Wrong Data Display";
-        
+        public const string ConnStr = "data source = orcl; user id = scott; password = tiger;";
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
