@@ -200,6 +200,7 @@
     <Content Include="Assets\Home\tik.png" />
     <Content Include="Assets\Login\4051919-middle.png" />
     <Content Include="Assets\Login\login_icon.png" />
+    <Content Include="Assets\Manage Booking\manage.jpg" />
     <Content Include="Assets\Profile\background12.jpg" />
     <Content Include="Assets\Profile\login_icon.png" />
     <Content Include="Assets\Profile\user.png" />

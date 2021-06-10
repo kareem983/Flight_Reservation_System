@@ -57,8 +57,6 @@ namespace Flight_Reservation_system
 
         private void button3_Click(object sender, EventArgs e)
         {
-            new Booking().Show();
-            /*
             if (!Program.UserEmail.Equals(""))
             {
                 //go to booking a flight
@@ -66,10 +64,9 @@ namespace Flight_Reservation_system
             }
             else
             {
-                MessageBox.Show("Login first!!!");
-            }*/
-
-
+                MessageBox.Show("Please Login First");
+            }
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -79,9 +76,6 @@ namespace Flight_Reservation_system
 
         private void button6_Click(object sender, EventArgs e)
         {
-            
-            new Search_For_Flight().Show();
-            /*
             if (!Program.UserEmail.Equals(""))
             {
                 //go to search for flight
@@ -89,16 +83,12 @@ namespace Flight_Reservation_system
             }
             else
             {
-                MessageBox.Show("Login first!!!");
-            }*/
+                MessageBox.Show("Please Login First");
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            new Profile().Show();
-           
-            
-            /*
             if (!Program.UserEmail.Equals(""))
             {
                 // go to profile
@@ -106,14 +96,12 @@ namespace Flight_Reservation_system
             }
             else
             {
-                MessageBox.Show("Login first!!!");
-            }*/
+                MessageBox.Show("Please Login First");
+            }
         }
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            new Manage_Booking().Show();
-           /* 
             if (!Program.UserEmail.Equals(""))
             {
                 // go to Manage Booking
@@ -121,8 +109,8 @@ namespace Flight_Reservation_system
             }
             else
             {
-                MessageBox.Show("Login first!!!");
-            }*/
+                MessageBox.Show("Please Login First");
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -132,17 +120,15 @@ namespace Flight_Reservation_system
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            new FlightsReport().Show();
-            
-            /* if (!Program.UserEmail.Equals(""))
+            if (!Program.UserEmail.Equals(""))
              {
                 // go to Flights Crystal Report 1
                 new FlightsReport().Show();
              }
              else
              {
-                 MessageBox.Show("Login first!!!");
-             }*/
+                 MessageBox.Show("Please Login First");
+             }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -152,17 +138,15 @@ namespace Flight_Reservation_system
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            new TownsReport().Show();
-
-            /* if (!Program.UserEmail.Equals(""))
+            if (!Program.UserEmail.Equals(""))
              {
                 // go to Towns Crystal Report 1
                 new TownsReport().Show();
              }
              else
              {
-                 MessageBox.Show("Login first!!!");
-             }*/
+                 MessageBox.Show("Please Login First");
+             }
         }
     }
 }
