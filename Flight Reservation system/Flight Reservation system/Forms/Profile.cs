@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
 
@@ -15,7 +14,7 @@ namespace Flight_Reservation_system
 {
     public partial class Profile : Form
     {
-        string ordb = "Data source=orcl;User Id=hr; Password=hr;";
+        string ordb;
         OracleConnection conn;
         string email;
         string FName;
@@ -30,48 +29,51 @@ namespace Flight_Reservation_system
 
         private void Profile_Load(object sender, EventArgs e)
         {
+            ordb = Program.ConnStr;
             conn = new OracleConnection(ordb);
             conn.Open();
-            email = "ahmedgamal.com";
+            email = Program.UserEmail;
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "GetData";
+            cmd.CommandText = "PRO_GET_USER_DATA";
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("email",email );
+            cmd.Parameters.Add("email_", email );
+            
 
-            OracleParameter FNameParameter = new OracleParameter("FIRST_NAME", OracleDbType.Varchar2, 2000);
+            OracleParameter FNameParameter = new OracleParameter("FIRST_NAME", OracleDbType.Varchar2, 50);
             FNameParameter.Direction = ParameterDirection.Output;
             cmd.Parameters.Add(FNameParameter);
 
-            OracleParameter LNameParameter = new OracleParameter("LAST_NAME", OracleDbType.Varchar2, 2000);
+            OracleParameter LNameParameter = new OracleParameter("LAST_NAME", OracleDbType.Varchar2, 50);
             LNameParameter.Direction = ParameterDirection.Output;
             cmd.Parameters.Add(LNameParameter);
 
-            OracleParameter AddressParameter = new OracleParameter("ADDRESS", OracleDbType.Varchar2, 2000);
+            OracleParameter AddressParameter = new OracleParameter("ADDRESS", OracleDbType.Varchar2, 50);
             AddressParameter.Direction = ParameterDirection.Output;
             cmd.Parameters.Add(AddressParameter);
 
-            OracleParameter PassNumParameter = new OracleParameter("PASSPORT_NUM", OracleDbType.Varchar2, 2000);
+            OracleParameter PassNumParameter = new OracleParameter("PASSPORT_NUM", OracleDbType.Int32,2000);
             PassNumParameter.Direction = ParameterDirection.Output;
             cmd.Parameters.Add(PassNumParameter);
 
-            OracleParameter CreditNumParameter = new OracleParameter("CREDIT_NUM", OracleDbType.Varchar2, 2000);
+            OracleParameter CreditNumParameter = new OracleParameter("CREDIT_NUM", OracleDbType.Varchar2, 20);
             CreditNumParameter.Direction = ParameterDirection.Output;
             cmd.Parameters.Add(CreditNumParameter);
-
+            
 
             try
             {
-                cmd.ExecuteNonQuery();
-            }catch(Exception ex) {
+                int ret = cmd.ExecuteNonQuery();
+            }
+            catch(Exception ex) {
                 MessageBox.Show("Faild to get data");
             }
 
-         FName=FNameParameter.Value.ToString();
-         LName=   LNameParameter.Value.ToString();
-         Address= AddressParameter.Value.ToString();
-         Passport=PassNumParameter.Value.ToString();
-         Credit=   CreditNumParameter.Value.ToString();
+             FName =   FNameParameter.Value.ToString();
+             LName =   LNameParameter.Value.ToString();
+             Address = AddressParameter.Value.ToString();
+             Passport = PassNumParameter.Value.ToString();
+             Credit =   CreditNumParameter.Value.ToString();
           
             
             textBox1.Text = FNameParameter.Value.ToString();
@@ -85,7 +87,7 @@ namespace Flight_Reservation_system
 
             OracleCommand cmd2 = new OracleCommand();
             cmd2.Connection = conn;
-            cmd2.CommandText = "GETPHONES";
+            cmd2.CommandText = "PRO_GET_USER_PHONES";
             cmd2.CommandType = CommandType.StoredProcedure;
             cmd2.Parameters.Add("email", email);
             cmd2.Parameters.Add("phones", OracleDbType.RefCursor, ParameterDirection.Output);
@@ -134,7 +136,7 @@ namespace Flight_Reservation_system
              //     cmd.CommandText = "update PRO_CUSTOMER set FIRST_NAME = :first , LAST_NAME = :last , address = :address , passport_num = :passport , credit_num = :credit WHERE email = :email_ ";
                //  cmd.CommandType = CommandType.Text;
 
-                cmd.CommandText = "UPDATECUSTOMER";
+                cmd.CommandText = "PRO_UPDATE_CUSTOMER_DATA";
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("email", email);
                 cmd.Parameters.Add("first", textBox1.Text);
@@ -147,9 +149,10 @@ namespace Flight_Reservation_system
 
                 int ret = cmd.ExecuteNonQuery();
                 /*if (ret == -1) MessageBox.Show("Invalid problem1");
-                else*/ MessageBox.Show("Successfull Update");
+                else*/ MessageBox.Show("Data Updated Successfull");
 
-                FName= textBox1.Text ;
+                label5.Text = textBox1.Text.ToString() + " " + textBox2.Text.ToString();
+                FName = textBox1.Text ;
                 LName= textBox2.Text ;
                 email= textBox3.Text  ;
                 Address=textBox4.Text ;
@@ -176,6 +179,11 @@ namespace Flight_Reservation_system
             textBox5.Text = Passport;
             textBox6.Text = Credit;
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
