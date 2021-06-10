@@ -173,6 +173,16 @@ namespace Flight_Reservation_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Solo_Travel_Safety {
+            get {
+                object obj = ResourceManager.GetObject("Solo+Travel+Safety", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tik {
             get {
                 object obj = ResourceManager.GetObject("tik", resourceCulture);

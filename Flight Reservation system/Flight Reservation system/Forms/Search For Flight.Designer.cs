@@ -62,7 +62,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Firebrick;
-            this.label1.Location = new System.Drawing.Point(790, 123);
+            this.label1.Location = new System.Drawing.Point(790, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 23);
             this.label1.TabIndex = 12;
@@ -70,18 +70,20 @@
             // 
             // cmb_1
             // 
+            this.cmb_1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_1.FormattingEnabled = true;
             this.cmb_1.Location = new System.Drawing.Point(843, 125);
             this.cmb_1.Name = "cmb_1";
-            this.cmb_1.Size = new System.Drawing.Size(159, 21);
+            this.cmb_1.Size = new System.Drawing.Size(159, 26);
             this.cmb_1.TabIndex = 14;
             // 
             // cmb_2
             // 
+            this.cmb_2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
             this.cmb_2.FormattingEnabled = true;
             this.cmb_2.Location = new System.Drawing.Point(843, 176);
             this.cmb_2.Name = "cmb_2";
-            this.cmb_2.Size = new System.Drawing.Size(159, 21);
+            this.cmb_2.Size = new System.Drawing.Size(159, 26);
             this.cmb_2.TabIndex = 15;
             // 
             // dataGridView1
@@ -139,7 +141,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Firebrick;
-            this.label4.Location = new System.Drawing.Point(792, 174);
+            this.label4.Location = new System.Drawing.Point(793, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 23);
             this.label4.TabIndex = 20;

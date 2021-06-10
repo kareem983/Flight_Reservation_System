@@ -54,26 +54,35 @@ namespace Flight_Reservation_system
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (cmb_1.Text.Equals("") || cmb_2.Text.Equals(""))
+            try
             {
-                MessageBox.Show(Program.MessageAlert);
+
+                if (cmb_1.Text.Equals("") || cmb_2.Text.Equals(""))
+                {
+                    MessageBox.Show(Program.MessageAlert);
+                }
+                else
+                {
+                    dataGridView1.Visible = true;
+                    OracleCommand cmd = new OracleCommand();
+                    cmd.Connection = conn;
+                    cmd.CommandText = "PRO_SEARCH_FOR_Flight";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("sourcee", cmb_1.SelectedItem.ToString());
+                    cmd.Parameters.Add("des", cmb_2.SelectedItem.ToString());
+                    cmd.Parameters.Add("cities", OracleDbType.RefCursor, ParameterDirection.Output);
+                    da = new OracleDataAdapter(cmd);
+                    cb = new OracleCommandBuilder(da);
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    dataGridView1.DataSource = ds.Tables[0];
+                    //conn.Close();
+                }
             }
-            else
+            catch
             {
-                dataGridView1.Visible = true;
-                OracleCommand cmd = new OracleCommand();
-                cmd.Connection = conn;
-                cmd.CommandText = "PRO_SEARCH_FOR_Flight";
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("sourcee", cmb_1.SelectedItem.ToString());
-                cmd.Parameters.Add("des", cmb_2.SelectedItem.ToString());
-                cmd.Parameters.Add("cities", OracleDbType.RefCursor, ParameterDirection.Output);
-                da = new OracleDataAdapter(cmd);
-                cb = new OracleCommandBuilder(da);
-                ds = new DataSet();
-                da.Fill(ds);
-                dataGridView1.DataSource = ds.Tables[0];
-                //conn.Close();
+                dataGridView1.Visible = false;
+                MessageBox.Show("Wrong Places\nPlease Select Right Place");
             }
         }
 
@@ -86,6 +95,8 @@ namespace Flight_Reservation_system
         {
             dataGridView1.Columns.Clear();
             dataGridView1.Visible = false;
+            cmb_1.Text = "";
+            cmb_2.Text = "";
         }
     }
 }

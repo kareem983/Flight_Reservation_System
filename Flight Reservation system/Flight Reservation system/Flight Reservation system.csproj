@@ -187,6 +187,7 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Booking\Solo+Travel+Safety.jpg" />
     <Content Include="Assets\Home\1287373.jpg" />
     <Content Include="Assets\Home\24c70c7a55d7b348f87c8a7a0a078897.png" />
     <Content Include="Assets\Home\index.png" />

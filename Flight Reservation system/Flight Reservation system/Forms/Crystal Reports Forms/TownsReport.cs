@@ -46,15 +46,23 @@ namespace Flight_Reservation_system
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Text.ToString().Equals("") || comboBox2.Text.ToString().Equals(""))
+            try
             {
-                MessageBox.Show(Program.MessageAlert);
+
+                if (comboBox1.Text.ToString().Equals("") || comboBox2.Text.ToString().Equals(""))
+                {
+                    MessageBox.Show(Program.MessageAlert);
+                }
+                else
+                {
+                    cr.SetParameterValue(0, comboBox1.SelectedItem.ToString());
+                    cr.SetParameterValue(1, comboBox2.SelectedItem.ToString());
+                    crystalReportViewer1.ReportSource = cr;
+                }
             }
-            else
+            catch
             {
-                cr.SetParameterValue(0, comboBox1.SelectedItem.ToString());
-                cr.SetParameterValue(1, comboBox2.SelectedItem.ToString());
-                crystalReportViewer1.ReportSource = cr;
+                MessageBox.Show("Wrong Places\nPlease Select Right Place");
             }
         }
     }
