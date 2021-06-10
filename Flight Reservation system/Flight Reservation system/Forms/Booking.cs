@@ -124,7 +124,8 @@ namespace Flight_Reservation_system
                         int rest = int.Parse(seats) - int.Parse(nums.Text.ToString());
                         if (rest < 0)
                         {
-                            MessageBox.Show("out of tickets");
+                            MessageBox.Show("Out of tickets\nNumber of Tickets less than your ticket Number");
+                            return;
                         }
                         else
                         {
