@@ -81,17 +81,17 @@
     <Compile Include="Forms\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Profile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Profile.Designer.cs">
-      <DependentUpon>Profile.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Manage Booking.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Manage Booking.Designer.cs">
       <DependentUpon>Manage Booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Profile.designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -200,6 +200,7 @@
     <Content Include="Assets\Home\tik.png" />
     <Content Include="Assets\Login\4051919-middle.png" />
     <Content Include="Assets\Login\login_icon.png" />
+    <Content Include="Assets\Profile\user.png" />
     <Content Include="Assets\Search\back2.jpg" />
     <Content Include="Assets\Search\background.png" />
   </ItemGroup>

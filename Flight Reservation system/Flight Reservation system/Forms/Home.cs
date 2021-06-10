@@ -96,6 +96,8 @@ namespace Flight_Reservation_system
         private void button7_Click(object sender, EventArgs e)
         {
             new Profile().Show();
+           
+            
             /*
             if (!Program.UserEmail.Equals(""))
             {
