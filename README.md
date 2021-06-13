@@ -1,2 +1,2 @@
-# Flight_reservation_system
-...
+# Flight Reservation System (FRMS)
+Flight Reservation System Using ODP.Net and C# windows forms, It's an Application on Database Management and Relations between Entities, With a smooth UI relieves the user.
