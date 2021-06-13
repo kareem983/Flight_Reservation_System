@@ -37,6 +37,6 @@ The FRMS Entities Divided Into (Customer, Airport, Flight, Seats):
 </details>
 
 🔸 [Database SQL Script](Flight_Reservation_system/Database/FRS_script.sql) <br>
-🔸 [Database Procedures](Flight_Reservation_system/Database/"Stored_Procedures") 
+🔸 [Database Procedures](Flight_Reservation_system/Database/Stored_Procedures) 
 
 
