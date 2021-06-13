@@ -16,3 +16,25 @@ The FRMS Entities Divided Into (Customer, Airport, Flight, Seats):
 3. Any Oracle Database.
 
 
+# Getting into the project
+
+<details>
+  <summary>ERD</summary>
+<p>
+
+![ERD Diagram](https://user-images.githubusercontent.com/52586356/121824626-cfa46c80-ccad-11eb-9ce6-6184aed5f25f.png)
+
+</p>
+</details>
+
+<details>
+  <summary>Schema</summary>
+<p>
+
+![Schema Diagram](https://user-images.githubusercontent.com/52586356/121824656-0d08fa00-ccae-11eb-8d2e-b51f0ea7d2bb.png)
+
+</p>
+</details>
+
+
+
