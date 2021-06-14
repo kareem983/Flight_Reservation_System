@@ -85,5 +85,10 @@ The FRMS Entities Divided Into (Customer, Airport, Flight, Seats):
 
 # References/Resources
 
-- [Crystal Reports](https://www.nosware.com/crystal-reports-visual-studio-2017/16730/?fbclid=IwAR0Htdt0Vgiw5QXzPdI9HRW5m_IKqWfvWtuoGrk8cTUa0QYnOjV8sUzaSr8)
+- [.Net Guide](https://visualstudio.microsoft.com/vs/features/net-development/)
 
+- [Database Guide](https://docs.oracle.com/cd/B19306_01/server.102/b14231/toc.htm)
+
+- [Oracle Database](https://www.oracle.com/database/)
+
+- [Crystal Reports](https://www.nosware.com/crystal-reports-visual-studio-2017/16730/?fbclid=IwAR0Htdt0Vgiw5QXzPdI9HRW5m_IKqWfvWtuoGrk8cTUa0QYnOjV8sUzaSr8)
