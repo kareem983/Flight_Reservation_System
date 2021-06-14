@@ -45,14 +45,28 @@ namespace Flight_Reservation_system
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //go to sign up
-            new Sign_UP().Show();
+            if (!Program.UserEmail.Equals(""))
+            {
+                MessageBox.Show("You Already Signed in");
+            }
+            else
+            {
+                //go to sign up
+                new Sign_UP().Show();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //go to sign in
-            new Sign_In().Show();
+            if (!Program.UserEmail.Equals(""))
+            {
+                MessageBox.Show("You Already Signed in");
+            }
+            else
+            {
+                //go to sign in
+                new Sign_In().Show();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

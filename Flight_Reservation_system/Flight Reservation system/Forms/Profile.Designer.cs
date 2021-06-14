@@ -195,7 +195,7 @@
             this.textBox6.Margin = new System.Windows.Forms.Padding(0);
             this.textBox6.MinimumSize = new System.Drawing.Size(4, 45);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(326, 45);
+            this.textBox6.Size = new System.Drawing.Size(326, 30);
             this.textBox6.TabIndex = 14;
             // 
             // label7

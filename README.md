@@ -1,5 +1,5 @@
 # Flight Reservation System (FRMS)
-Flight Reservation System Using ODP.Net and C# windows forms, It's an Application on Database Management and Relations between Entities, With a smooth UI relieves the user.
+Flight Reservation System Using ODP.Net and C# windows forms, It's an Application on Database Management and Relations between Entities.
 
 # Description
 The FRMS helps the Customers to Register/login in the system and search for the available flight then determine it then Book it with (Source place, Destination place, number of tickets).
@@ -37,6 +37,6 @@ The FRMS Entities Divided Into (Customer, Airport, Flight, Seats):
 </details>
 
 🔸 [Database SQL Script](Flight_Reservation_system/Database/FRS_script.sql) <br>
-🔸 [Database Procedures](Flight_Reservation_system/Database/Stored_Procedures) 
+🔸 [Database Stored Procedures](Flight_Reservation_system/Database/Stored_Procedures) 
 
 
