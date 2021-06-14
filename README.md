@@ -72,8 +72,10 @@ The FRMS Entities Divided Into (Customer, Airport, Flight, Seats):
 <details>
   <summary>Crystal Reports</summary>
 <p>
+
 **Airports Flights Schedualing:**<BR>
-![Flights Reporting](https://user-images.githubusercontent.com/52586356/121836441-b44c5800-ccd3-11eb-8606-d957e4680f1b.png)
+![Flights Reporting](https://user-images.githubusercontent.com/52586356/121836851-97fceb00-ccd4-11eb-92b4-a38a15a1d4da.png)
+
 
 **Countries Flights Schedualing:**<BR>
 ![Towns Reporting](https://user-images.githubusercontent.com/52586356/121836465-bca49300-ccd3-11eb-8a5f-f9544c989f5d.png)
