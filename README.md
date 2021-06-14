@@ -83,7 +83,7 @@ The FRMS Entities Divided Into (Customer, Airport, Flight, Seats):
 </p>
 </details>
 
-#References/Resources
+# References/Resources
 
--[Crystal Reports](https://www.nosware.com/crystal-reports-visual-studio-2017/16730/?fbclid=IwAR0Htdt0Vgiw5QXzPdI9HRW5m_IKqWfvWtuoGrk8cTUa0QYnOjV8sUzaSr8)
+- [Crystal Reports](https://www.nosware.com/crystal-reports-visual-studio-2017/16730/?fbclid=IwAR0Htdt0Vgiw5QXzPdI9HRW5m_IKqWfvWtuoGrk8cTUa0QYnOjV8sUzaSr8)
 
